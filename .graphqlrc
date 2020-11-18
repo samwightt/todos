@@ -1,0 +1,2 @@
+schema: "./schema.graphql"
+include: "frontend/src/components/**/*.tsx"

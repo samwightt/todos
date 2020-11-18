@@ -1,0 +1,47 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+div .DayPicker-Day {
+  line-height: 1.3;
+}
+
+.DayPicker-Day--hoverRangeStart {
+  @apply bg-gray-200 text-black;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.DayPicker-Day--hoverRangeEnd {
+  @apply bg-gray-200 text-black;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.DayPicker-Day--hoverRange:not(.DayPicker-Day--hoverRangeStart):not(.DayPicker-Day--selected):not(.DayPicker-Day--hoverRangeEnd) {
+  @apply bg-gray-200 text-black;
+  border-radius: 0;
+}
+
+.DayPicker-Day--selectedRangeStart {
+  @apply bg-blue-500 text-white;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.DayPicker-Day--selectedRangeEnd {
+  @apply bg-blue-400 text-white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.DayPicker-Day--selectedRange:not(.DayPicker-Day--selectedRangeStart):not(.DayPicker-Day--selected):not(.DayPicker-Day--selectedRangeEnd) {
+  @apply bg-blue-400 text-white;
+  border-radius: 0;
+}
+
+.ColumnList {
+  max-height: calc(100% - 8rem);
+}

@@ -1,0 +1,46 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Day implements Node {
+  date: DateTime!
+  id: ID!
+  tasks: [TaskType!]!
+}
+
+type Mutation {
+  createTask(input: TaskCreationInput!): TaskType!
+}
+
+interface Node {
+  id: ID!
+}
+
+type Query {
+  day(day: DateTime!): Day!
+  days(input: [DateTime!]!): [Day!]!
+  task(id: ID!): TaskType!
+  tasks: [TaskType!]!
+}
+
+input TaskCreationInput {
+  completed: Boolean!
+  name: String!
+  scheduledFor: DateTime
+  scheduledPosition: Float
+  timeEstimate: Float
+}
+
+type TaskType implements Node {
+  completed: String!
+  id: ID!
+  name: String!
+  scheduledFor: DateTime
+  scheduledPosition: Float!
+  timeEstimate: Float
+}
