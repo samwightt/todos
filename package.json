@@ -2,7 +2,8 @@
   "private": true,
   "workspaces": [
     "frontend",
-    "server"
+    "server",
+    "app"
   ],
   "devDependencies": {
     "@yarnpkg/pnpify": "^2.3.3",

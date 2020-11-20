@@ -1,10 +1,16 @@
-import { FC } from "react";
-import { graphql, useFragment } from "react-relay/hooks";
-import { ColumnsListFragment$key } from "__generated__/ColumnsListFragment.graphql";
-import Column from "./Column";
+import React from 'react';
+import type { FC } from 'react';
+import {
+  graphql,
+  useFragment,
+  useRefetchableFragment,
+} from 'react-relay/hooks';
+import type { ColumnsListFragment$key } from '../__generated__/ColumnsListFragment.graphql';
+import Column from './Column';
 
 const columnsListFragment = graphql`
   fragment ColumnsListFragment on Query
+  @refetchable(queryName: "ColumnsListRefetchQuery")
   @argumentDefinitions(days: { type: "[DateTime!]!" }) {
     days(input: $days) {
       ...ColumnFragment
@@ -19,8 +25,10 @@ interface ColumnsListProps {
 const ColumnsList: FC<ColumnsListProps> = (props) => {
   const data = useFragment(columnsListFragment, props.days);
 
+  console.log(data);
+
   return (
-    <div>
+    <div className="w-full flex flex-row">
       {data.days.map((day) => (
         <Column day={day} />
       ))}
