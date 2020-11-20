@@ -1,4 +1,4 @@
-import { FC, Fragment } from "react";
+import { FC, Fragment } from 'react';
 
 interface TaskCardProps {
   name: string;
@@ -20,11 +20,11 @@ const TaskCard: FC<TaskCardProps> = (props) => {
       )}
       {props.tags && (
         <p className="my-2 text-xs text-gray-600">
-          #{" "}
+          #{' '}
           {props.tags.map((tag, index) => (
             <Fragment key={index}>
               <span className="font-bold hover:text-gray-800">{tag}</span>
-              {index !== props.tags.length - 1 && ", "}
+              {props.tags && index !== props.tags.length - 1 && ', '}
             </Fragment>
           ))}
         </p>

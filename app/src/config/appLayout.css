@@ -1,0 +1,14 @@
+.appCols {
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  grid-template-columns: 1fr;
+  max-height: 100vh;
+}
+
+@screen lg {
+  .appCols {
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    grid-template-columns: 16rem 1fr 20rem;
+  }
+}

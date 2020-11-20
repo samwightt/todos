@@ -28,7 +28,7 @@ const ColumnsList: FC<ColumnsListProps> = (props) => {
   console.log(data);
 
   return (
-    <div className="w-full flex flex-row">
+    <div className="flex flex-row w-full">
       {data.days.map((day) => (
         <Column day={day} />
       ))}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import './config/tailwind.css';
+import './config/appLayout.css';
 import 'react-day-picker/lib/style.css';
 
 import { RelayEnvironmentProvider } from 'react-relay/hooks';

@@ -46,9 +46,9 @@ const LeftSidebar = () => {
   };
 
   return (
-    <div className="w-2/12 bg-white h-full flex flex-col border-gray-400 border-r">
+    <div className="w-64 bg-white flex-col border-gray-400 border-r flex-none hidden lg:flex">
       <div className="w-full">
-        <DayPicker
+        {/* <DayPicker
           onDayClick={(day) => {
             setDate(day);
 
@@ -77,6 +77,7 @@ const LeftSidebar = () => {
           onDayMouseEnter={(date) => setHoverRange(getHoverRange(date))}
           onDayMouseLeave={() => setHoverRange(undefined)}
         />
+      </div> */}
       </div>
       <div className="h-full bg-gray-100"></div>
     </div>

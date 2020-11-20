@@ -4,6 +4,10 @@
     "server",
     "app"
   ],
+  "scripts": {
+    "start:app": "yarn workspace app start",
+    "start:server": "yarn workspace server start:dev"
+  },
   "devDependencies": {
     "@yarnpkg/pnpify": "^2.3.3",
     "prettier": "^2.1.2",

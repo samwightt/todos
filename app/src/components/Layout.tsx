@@ -35,15 +35,18 @@ const Layout: FC = ({ children }) => {
   });
 
   return (
-    <div className="flex flex-row h-screen w-full max-h-screen">
+    <div className="h-screen w-full max-h-screen grid appCols">
+      <div className="col-span-3 h-12 bg-black"></div>
       <LeftSidebar />
       <ColumnsList days={data} />
-      <div className="w-96 bg-green-500 h-full"></div>
-      <div className="w-16 bg-amber-500 h-full flex flex-col space-y-6 pt-10">
-        <div className="w-10 h-10 bg-black mx-auto rounded"></div>
-        <div className="w-10 h-10 bg-black mx-auto rounded"></div>
-        <div className="w-10 h-10 bg-black mx-auto rounded"></div>
-        <div className="w-10 h-10 bg-black mx-auto rounded"></div>
+      <div className="hidden lg:flex lg:flex-row">
+        <div className="bg-green-500 h-screen w-64"></div>
+        <div className="w-16 bg-amber-500 flex-col space-y-6 pt-10 flex-none">
+          <div className="w-10 h-10 bg-black mx-auto rounded"></div>
+          <div className="w-10 h-10 bg-black mx-auto rounded"></div>
+          <div className="w-10 h-10 bg-black mx-auto rounded"></div>
+          <div className="w-10 h-10 bg-black mx-auto rounded"></div>
+        </div>
       </div>
       {children}
     </div>
