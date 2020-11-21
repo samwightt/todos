@@ -1,3 +1,7 @@
+body {
+  @apply overscroll-none;
+}
+
 .appCols {
   display: grid;
   grid-template-rows: 3rem 1fr;
